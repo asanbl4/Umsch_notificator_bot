@@ -1,12 +1,7 @@
 import csv
 from cred import client
-from dotenv import load_dotenv
-import os
+from constants import SPREADSHEETS_FILE_URL, TL_SHEET_NAME
 
-load_dotenv()
-
-SPREADSHEETS_FILE_URL = os.getenv("SPREADSHEET_URL")
-TL_SHEET_NAME = "ТЛ Асанали"
 
 sheet = client.open_by_url(SPREADSHEETS_FILE_URL).worksheet(TL_SHEET_NAME)
 
